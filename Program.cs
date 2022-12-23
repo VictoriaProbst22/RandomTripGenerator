@@ -15,18 +15,22 @@ Console.WriteLine($"You Chose {inputChoice}!");
 switch(inputChoice) 
 {
   case "Y":
-    Console.WriteLine("Great Choice! Lets See What Snacks Are There!");
+    Console.WriteLine("Great Choice! Lets See What Options We Have For Transportation!");
     break;
   case "N":
-    Console.WriteLine($"Your Next Choice is {destinations[index]}, Good Choice? (Y/N)");
+    Random randTwo = new Random();
+    int index2 = rand.Next(destinations.Length);
+    Console.WriteLine($"Your Next Choice is {destinations[index2]}, Good Choice? (Y/N)");
     string inputChoice2 = Console.ReadLine();
     Console.WriteLine($"You chose {inputChoice2}");
     if(inputChoice2 == "Y")
     {
-        Console.WriteLine("You Choose The Best Spot! Lets See What Food Options You Have There! ");
+        Console.WriteLine("You Choose The Best Spot! Lets See What Means of Travel You Have To Get There! ");
     } else if (inputChoice2 == "N")
     {
-        Console.WriteLine($"Your Next Option Is: {destinations[index]}, Is This Your Choice?");
+        Random randThree = new Random();
+        int index3 = rand.Next(destinations.Length);
+        Console.WriteLine($"Your Next Option Is: {destinations[index3]}, Is This Your Choice?");
         string inputChoice3 = Console.ReadLine();
         Console.WriteLine($"You Chose {inputChoice3}!");
         if (inputChoice3 == "Y")
