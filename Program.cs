@@ -50,3 +50,53 @@ switch(inputChoice)
     Console.WriteLine("Thats not a choice! Try Again!");
     break;
 }
+
+//Transportation Array And Choice List
+string[] transportation = {"VW Retro Bus", "Private Jet", "Moped/Motorcycle", "Ferry"};
+
+
+
+Random randFour = new Random();
+int index4 = rand.Next(transportation.Length);
+Console.WriteLine($"Now That we Have our Destination, How Are You Getting There? How About {transportation[index]}? (Y/N)");
+string inputChoice4 = Console.ReadLine();
+Console.WriteLine($"You Chose {inputChoice4}");
+switch(inputChoice4)
+{
+  case "Y":
+    Console.WriteLine("Great Choice! Lets See What Options We Have For Food!");
+    break;
+  case "N":
+    Random randFive = new Random();
+    int index5 = rand.Next(transportation.Length);
+    Console.WriteLine($"Your Next Choice is {transportation[index5]}, Good Choice? (Y/N)");
+    string inputChoice5 = Console.ReadLine();
+    Console.WriteLine($"You chose {inputChoice5}");
+    if(inputChoice5 == "Y")
+    {
+        Console.WriteLine("You Choose The Best Spot! Lets See What Food You Have There! ");
+    } else if (inputChoice5 == "N")
+    {
+        Random randSix = new Random();
+        int index6 = rand.Next(transportation.Length);
+        Console.WriteLine($"Your Next Option Is: {transportation[index6]}, Is This Your Choice?");
+        string inputChoice6 = Console.ReadLine();
+        Console.WriteLine($"You Chose {inputChoice6}!");
+        if (inputChoice6 == "Y")
+        {
+            Console.WriteLine("Great Lets Move Along!");
+        } else
+        {
+            Console.WriteLine("I have No Other Options :( , Lets Start Over!");
+        }
+
+    } else
+    {
+        Console.WriteLine($"Your Last Option Is: {transportation[index]}");
+    }
+    break;
+  default:
+    Console.WriteLine("Thats not a choice! Try Again!");
+    break;
+}
+
