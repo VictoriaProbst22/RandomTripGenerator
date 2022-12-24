@@ -43,7 +43,7 @@ switch(inputChoice)
 
     } else
     {
-        Console.WriteLine("Thats not a choice! Try Again!");
+        Console.WriteLine("I Understand Your Indecisiveness! Theres A Lot Of Options!");
     }
     break;
   default:
@@ -92,7 +92,7 @@ switch(inputChoice4)
 
     } else
     {
-        Console.WriteLine("Thats not a choice! Try Again!");
+        Console.WriteLine("I Understand Your Indecisiveness! Theres A Lot Of Options!");
     }
     break;
   default:
@@ -138,7 +138,7 @@ switch(inputChoice7)
 
     } else
     {
-        Console.WriteLine("Thats not a choice! Try Again!");
+        Console.WriteLine("I Understand Your Indecisiveness! Theres A Lot Of Options!");
     }
     break;
   default:
@@ -148,3 +148,52 @@ switch(inputChoice7)
 
 //Events Array and Choice Loops
 string[] events = {"Music Concert", "Opera", "Synchronize Swimmers", "Balloon Festival"};
+Random randTen = new Random();
+int index10 = rand.Next(events.Length);
+Console.WriteLine($"We Have A Destination, Travel and Food Are Covered. Would You Like To Attend A Free Event? Hows {events[index]}?");
+string inputChoice10 = Console.ReadLine();
+Console.WriteLine($"You Chose {inputChoice10}!");
+switch(inputChoice10)
+{
+  case "Yes":
+    Console.WriteLine("Great Choice! Lets See Everything Laid Out!");
+    break;
+  case "No":
+    Random randEleven = new Random();
+    int index11 = rand.Next(events.Length);
+    Console.WriteLine($"Your Next Choice is {events[index11]}, Good Choice? (Yes/No)");
+    string inputChoice11 = Console.ReadLine();
+    Console.WriteLine($"You chose {inputChoice11}");
+    if(inputChoice11 == "Yes")
+    {
+        Console.WriteLine("Great Choice! Lets See Everything Laid Out!");
+    } else if (inputChoice11 == "No")
+    {
+        Random randTwelve = new Random();
+        int index12 = rand.Next(events.Length);
+        Console.WriteLine($"Your Next Option Is: {food[index12]}, Is This Your Choice?");
+        string inputChoice12 = Console.ReadLine();
+        Console.WriteLine($"You Chose {inputChoice12}!");
+        if (inputChoice12 == "Y")
+        {
+            Console.WriteLine("Great Choice! Lets See Everything Laid Out!");
+        } else
+        {
+            Console.WriteLine("I have No Other Options :( , Lets Start Over!");
+        }
+
+    } else
+    {
+        Console.WriteLine("I Understand Your Indecisiveness! Theres A Lot Of Options!");
+    }
+    break;
+  default:
+    Console.WriteLine("Thats not a choice! Try Again!");
+    break;
+}
+
+// Display Entire Choices To Confirm Plan
+
+Console.WriteLine($"You Chose: {destinations[index]}, {transportation[index]} , {food[index]} , {events[index]}! Confirm?");
+string inputChoice13 = Console.ReadLine();
+Console.WriteLine($"{inputChoice13}? , It Was A Pleasure Doing Buisness With You!");
